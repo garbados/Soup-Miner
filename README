@@ -1,12 +1,12 @@
 Sage Marmoset Data Miner
 
 COPYRIGHT INFORMATION:
-SaMarDaMin is licensed under GPL 3.0. The full license can be found here: http://www.gnu.org/copyleft/gpl.html
+Soup Miner is licensed under GPL 3.0. The full license can be found here: http://www.gnu.org/copyleft/gpl.html
 
 OVERVIEW
-SaMarDaMin is an open-source data-miner for lightweight projects. 
+Soup Miner is an open-source data-miner for lightweight projects. 
 It revolves around the use of urllib2 to collect web pages, 
-while using a simple library built for SaMarDaMin to parse the resultant HTML.
+while using the BeautifulSoup HTML parsing library to parse the collected data.
 
 CONTENTS
 	manager.py
@@ -23,10 +23,10 @@ CONTENTS
 	[spider]/recent.csv
 		Contains data from the most recent run.
 		Won't exist until spider is run.
-	[spider]/data
-		Contains data from the spider during run-time,
-		like the last URL traversed, 
-		the number of URLs traversed so far,
-		what to do about errors,
-		and how many iterations last run
-		all stored as a pickled dict.
+	[spider]/settings.txt
+		Contains spider settings, meant to be edited by hand (so the unsavvy needn't soil themselves with the command line) pertaining to:
+		- what url to use as a base
+		- whether to run in debug mode
+		- what the last ID parsed was
+		- how many iterations the spider last ran
+		- whether to rectify missing urls -- as in, pages we should have parsed, but for whatever reason haven't.
