@@ -1,0 +1,27 @@
+README
+
+LICENSING INFORMATION
+	TODO
+
+FILE CONTENTS
+BeautifulSoup.py
+	Our lovely HTML parser, courtesy of Leonard Richardson. Thanks, Leonard!
+	The licensing information and copyright notice are reproduced in BeautifulSoup.py in full.
+soupify.py
+	Contains generic functions for gathering and handling data.
+spider.py
+	The project's meat and bones: 
+	this specific spider's model (what data it wants)
+	and its parser function (how it goes about getting the data).
+miner.py
+	Functions for storing, retrieving, and modifying results data,
+	as well as for running the spider.
+	If run directly, starts mining using directions from settings.txt
+settings.txt
+	Contains settings for running the spider, and data from past runs.
+	Designed to be editable by hand.
+results.dat
+	Stores results from all of the spider's runs as a pickled dictionary.
+	miner.py contains functions for generating CSV, JSON, etc files from results.dat
+README
+	This file!

@@ -1,0 +1,32 @@
+Sage Marmoset Data Miner
+
+COPYRIGHT INFORMATION:
+SaMarDaMin is licensed under GPL 3.0. The full license can be found here: http://www.gnu.org/copyleft/gpl.html
+
+OVERVIEW
+SaMarDaMin is an open-source data-miner for lightweight projects. 
+It revolves around the use of urllib2 to collect web pages, 
+while using a simple library built for SaMarDaMin to parse the resultant HTML.
+
+CONTENTS
+	manager.py
+		Control panel. Start, reset, and run spiders.
+	miner.py
+		Data mining library.
+	[spider]/spider.py
+		Contains the spider's model as a dict,
+		a function that defines the list of URLs,
+		and the mining code as what to do given a URL.
+	[spider]/results.csv
+		Contains the aggregate of the spider's collected data in CSV form.
+		Won't exist until spider is run.
+	[spider]/recent.csv
+		Contains data from the most recent run.
+		Won't exist until spider is run.
+	[spider]/data
+		Contains data from the spider during run-time,
+		like the last URL traversed, 
+		the number of URLs traversed so far,
+		what to do about errors,
+		and how many iterations last run
+		all stored as a pickled dict.
